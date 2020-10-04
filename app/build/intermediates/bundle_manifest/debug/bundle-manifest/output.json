@@ -21,7 +21,7 @@
       "properties": {
         "packageId": "com.example.dear_dream",
         "split": "",
-        "minSdkVersion": "15"
+        "minSdkVersion": "19"
       }
     }
   ]

@@ -10,40 +10,45 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.viewHolder>{
-    private  ArrayList<judulItem> mjudulItem;
+public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
+    private  ArrayList<Item> judulItem;
 
-    public static class viewHolder extends RecyclerView.ViewHolder{
-
-        public TextView Teksview;
-
-        public viewHolder(View itemView){
-            super(itemView);
-            Teksview = itemView.findViewById(R.id.judul);
-        }
+    public Adapter(ArrayList<Item> judulItem) {
+        this.judulItem = judulItem;
     }
 
-    public Adapter(ArrayList<judulItem> judulItems){
-        mjudulItem = judulItems;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView judulTv;
+
+        public ViewHolder(View itemView){
+            super(itemView);
+
+            judulTv = itemView.findViewById(R.id.judul);
+        }
+
+        public void bind(Item item)
+        {
+            judulTv.setText(item.getjudul());
+        }
     }
 
     @NonNull
     @Override
-    public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.diary_item,parent,false);
-        viewHolder evh =new viewHolder(v);
-        return evh;
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.diary_item, parent,false);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        judulItem currentItem = mjudulItem.get(position);
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Item item = judulItem.get(position);
 
-        holder.Teksview.setText(currentItem.getjudul());
+        holder.bind(item);
     }
 
     @Override
     public int getItemCount() {
-        return mjudulItem.size();
+        return judulItem.size();
     }
 }

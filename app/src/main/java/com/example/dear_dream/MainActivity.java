@@ -15,46 +15,31 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button daily, task, diary;
-    private RecyclerView recycle;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayuotManager;
+    private SlidingUpPanelLayout slideUpLayout;
+    private Button dailyBtn, taskBtn, diaryBtn;
+    private RecyclerView recycleView;
+    private Adapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SlidingUpPanelLayout layout = findViewById(R.id.slidingup);
+        slideUpLayout = findViewById(R.id.slideup_layout);
+        recycleView = findViewById(R.id.recycleview);
 
+        //Temporary code
+        ArrayList<Item> listJudul = new ArrayList<>();
+        listJudul.add(new Item("#judul1"));
+        listJudul.add(new Item("#judul2"));
+        listJudul.add(new Item("#judul3"));
 
-        ArrayList<judulItem> listjudul = new ArrayList<>();
-        listjudul.add(new judulItem("#judul1"));
-        listjudul.add(new judulItem("#judul2"));
-        listjudul.add(new judulItem("#judul3"));
-        listjudul.add(new judulItem("#judul34"));
-        listjudul.add(new judulItem("#judul34"));
-        listjudul.add(new judulItem("#judul34"));
-        listjudul.add(new judulItem("#judul34"));
-        listjudul.add(new judulItem("#judul34"));
-        listjudul.add(new judulItem("#judul34"));
-        listjudul.add(new judulItem("#judul34"));
-        listjudul.add(new judulItem("#judul34"));
-        listjudul.add(new judulItem("#judul34"));
-        listjudul.add(new judulItem("#judul34"));
-        listjudul.add(new judulItem("#judul34"));
+        mAdapter = new Adapter(listJudul);
 
+        recycleView.setLayoutManager(new LinearLayoutManager(this));
+        recycleView.setAdapter(mAdapter);
 
-        recycle = findViewById(R.id.recycleview);
-        recycle.setHasFixedSize(true);
-        mLayuotManager = new LinearLayoutManager(this);
-        mAdapter = new Adapter(listjudul);
-
-        recycle.setLayoutManager(mLayuotManager);
-        recycle.setAdapter(mAdapter);
-
-
-         layout.addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
+        slideUpLayout.addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
              @Override
              public void onPanelSlide(View panel, float slideOffset) {
 
@@ -67,6 +52,5 @@ public class MainActivity extends AppCompatActivity {
              }
          });
     }
-
 }
 
