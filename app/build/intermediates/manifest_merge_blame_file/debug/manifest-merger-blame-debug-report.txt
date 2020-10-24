@@ -30,10 +30,10 @@
 20-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:11:9-40
 21        <activity
 21-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:12:9-18:20
-22            android:name="com.example.dear_dream.MainActivity"
-22-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:12:19-47
+22            android:name="com.example.dear_dream.activity.MainActivity"
+22-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:12:19-56
 23            android:screenOrientation="portrait" >
-23-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:12:48-84
+23-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:12:57-93
 24            <intent-filter>
 24-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:13:13-17:29
 25                <action android:name="android.intent.action.MAIN" />
