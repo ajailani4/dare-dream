@@ -1,5 +1,6 @@
 package com.example.dear_dream.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.dear_dream.R;
+import com.example.dear_dream.activity.AddDiary;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +28,8 @@ public class Diary extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private FloatingActionButton addDiaryFab;
 
     public Diary() {
         // Required empty public constructor
@@ -61,6 +66,18 @@ public class Diary extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_diary, container, false);
+        final View view = inflater.inflate(R.layout.fragment_diary, container, false);
+
+        addDiaryFab = view.findViewById(R.id.addDiaryFab);
+
+        addDiaryFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent addDiaryIntent = new Intent(view.getContext(), AddDiary.class);
+                startActivity(addDiaryIntent);
+            }
+        });
+
+        return view;
     }
 }

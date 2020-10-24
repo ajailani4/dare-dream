@@ -1564,6 +1564,7 @@ drawable diary
 drawable done
 drawable edit
 drawable ic_baseline_add_24
+drawable ic_baseline_check_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_checked_circle
@@ -1676,6 +1677,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addDiaryFab
 id alertTitle
 id aligned
 id all
@@ -1740,6 +1742,7 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id dialog_button
+id diaryEt
 id diary_btn
 id dimensions
 id direct
@@ -1774,6 +1777,7 @@ id fitToContents
 id fixed
 id flip
 id floating
+id floatingActionButton
 id forever
 id ghost_view
 id ghost_view_holder
@@ -1969,6 +1973,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -2052,6 +2057,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_diary
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2226,6 +2232,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string tambah_diary
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

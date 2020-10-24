@@ -11,7 +11,7 @@
 9-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:5:5-19:19
+11-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:5:5-29:19
 12        android:allowBackup="true"
 12-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -29,22 +29,37 @@
 20        android:theme="@style/AppTheme" >
 20-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:11:9-40
 21        <activity
-21-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:12:9-18:20
-22            android:name="com.example.dear_dream.activity.MainActivity"
-22-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:12:19-56
-23            android:screenOrientation="portrait" >
-23-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:12:57-93
-24            <intent-filter>
-24-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:13:13-17:29
-25                <action android:name="android.intent.action.MAIN" />
-25-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:14:17-69
-25-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:14:25-66
-26
-27                <category android:name="android.intent.category.LAUNCHER" />
-27-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:16:17-77
-27-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:16:27-74
-28            </intent-filter>
-29        </activity>
-30    </application>
-31
-32</manifest>
+21-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:12:9-19:20
+22            android:name="com.example.dear_dream.activity.AddDiary"
+22-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:13:13-46
+23            android:label="Tambah Diary"
+23-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:14:13-41
+24            android:parentActivityName="com.example.dear_dream.activity.MainActivity" >
+24-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:15:13-64
+25            <meta-data
+25-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:16:13-18:57
+26                android:name="android.support.PARENT_ACTIVITY"
+26-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:17:17-63
+27                android:value=".activity.MainActivity" />
+27-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:18:17-55
+28        </activity>
+29        <activity
+29-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:20:9-28:20
+30            android:name="com.example.dear_dream.activity.MainActivity"
+30-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:21:13-50
+31            android:screenOrientation="portrait" >
+31-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:22:13-49
+32            <intent-filter>
+32-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:23:13-27:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:24:17-69
+33-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:24:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:26:17-77
+35-->C:\Users\ahmad\AndroidStudioProjects\Dear_Dream\app\src\main\AndroidManifest.xml:26:27-74
+36            </intent-filter>
+37        </activity>
+38    </application>
+39
+40</manifest>
